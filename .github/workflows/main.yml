@@ -19,12 +19,15 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      # Укажи путь к .sln файлу или главному .csproj
+      run: dotnet restore CSharpSourceObfuscator.sln 
 
     - name: Build project
-      run: dotnet build --configuration Release --no-restore
+      # Здесь тоже добавь путь к файлу
+      run: dotnet build CSharpSourceObfuscator.sln --configuration Release --no-restore
 
     - name: Publish RoslynObfuscator
+      # Тут путь уже указан, это правильно
       run: dotnet publish RoslynObfuscator/RoslynObfuscator.csproj --configuration Release --no-build --output ./publish
 
     - name: Upload artifact
