@@ -1,4 +1,4 @@
-# CSharpSourceObfuscator
+# CSharpSourceObfuscator@
 A C# Solution Source Obfuscator for avoiding AV signatures with minimal user interaction. Powered by the Roslyn C# library.
 
 The goal of this project is to create a tool which, when provided with a path to a C# solution file, will obfuscate all of the source code and then generate a binary which is expected to bypass static analysis with minimal input from the user on an updated Windows 10 desktop. This is intended to extend the life of public C# red team tooling such as SpecterOps' GhostPack tools at https://github.com/GhostPack/. Once every payload in GhostPack can be compiled and executed on a fully patched Windows 10 machine, this project will be considered feature complete.
